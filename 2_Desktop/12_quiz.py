@@ -30,7 +30,8 @@ if window.isMaximized == False:
     
 # 텍스트 기능을 이용하여 글자 입력
 
-btn_txt = pyautogui.locateOnScreen("btn_txt.png")
+# 이미지를 찾을 때 정확도를 조금 줄여서 찾기
+btn_txt = pyautogui.locateOnScreen("btn_txt.png", confidence=0.8)
 pyautogui.click(btn_txt)
 pyautogui.click(btn_txt.left + 200, btn_txt.top + 200)
 
